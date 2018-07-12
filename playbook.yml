@@ -1,0 +1,4 @@
+- hosts: jenkins-server-linux_static
+  sudo: yes
+  roles:
+    - jenkins

@@ -1,0 +1,69 @@
+Started by user admin
+[Pipeline] node
+Running on master in /var/lib/jenkins/workspace/job1
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Stage 1)
+[Pipeline] echo
+Hello Jenkins 1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Stage 2)
+[Pipeline] echo
+Hello Jenkins 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage (Final stage)
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Final stage
+Proceeding
+[Pipeline] sh
+[job1] Running shell script
++ netstat -tunap
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:5432            0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      -                   
+tcp        0      0 192.168.0.110:22        192.168.0.101:53916     ESTABLISHED -                   
+tcp        0      0 192.168.0.110:22        192.168.0.101:53907     ESTABLISHED -                   
+tcp6       0      0 :::111                  :::*                    LISTEN      -                   
+tcp6       0      0 :::8080                 :::*                    LISTEN      4678/java           
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::5432                 :::*                    LISTEN      -                   
+tcp6       0      0 ::1:25                  :::*                    LISTEN      -                   
+tcp6       0      0 :::19581                :::*                    LISTEN      4678/java           
+tcp6       0      0 :::18052                :::*                    LISTEN      4678/java           
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54052     TIME_WAIT   -                   
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54058     ESTABLISHED 4678/java           
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54056     ESTABLISHED 4678/java           
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54057     ESTABLISHED 4678/java           
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54040     TIME_WAIT   -                   
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54055     ESTABLISHED 4678/java           
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54032     TIME_WAIT   -                   
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54044     TIME_WAIT   -                   
+tcp6       0      0 192.168.0.110:8080      192.168.0.101:54042     TIME_WAIT   -                   
+udp        0      0 0.0.0.0:13179           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -                   
+udp6       0      0 :::5353                 :::*                                4678/java           
+udp6       0      0 ::1:29595               ::1:29595               ESTABLISHED -                   
+udp6       0      0 :::33848                :::*                                4678/java           
+udp6       0      0 :::44704                :::*                                -                   
+[Pipeline] timeout
+Timeout set to expire in 30 min
+[Pipeline] {
+[Pipeline] input
+Input requested
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] echo
+Aborted by:
+ admin
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

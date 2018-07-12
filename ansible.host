@@ -1,0 +1,4 @@
+# This is the ansible 'hosts' file.
+[csi_test]
+#localhost
+jenkins-server-linux_static ansible_host=ec2-35-174-139-176.compute-1.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/.ssh/id_rsa

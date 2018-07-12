@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.10">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.29">
+    <script>node {
+stage(&apos;Stage 1&apos;) {
+    echo &apos;Hello Jenkins 1&apos;
+}
+stage(&apos;Stage 2&apos;) {
+    echo &apos;Hello Jenkins 2&apos;
+}
+stage &apos;Final stage&apos;
+// network connections
+sh &apos;netstat -tunap&apos;
+// Waiting for user&apos;s input
+try {
+    timeout(time: 30, unit: &apos;MINUTES&apos;) {
+	def userInput = input(
+	id: &apos;userInput&apos;, message: &apos;Please enter your string&apos;, parameters: [
+	[$class: &apos;TextParameterDefinition&apos;, defaultValue: &apos;&apos;, description: &apos;CSI task&apos;, name: &apos;&apos;]
+	])
+	echo (&quot;String: &quot;+userInput)
+    }
+} catch (err) {
+    def user = err.getCauses()[0].getUser()
+    echo &quot;Aborted by:\n ${user}&quot;
+}
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>
