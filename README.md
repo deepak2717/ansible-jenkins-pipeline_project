@@ -3,12 +3,12 @@ First you need to make sure that the SSH keys were created for current user (roo
 
 2.	Clone repository (for example):
 ```
-git clone https://github.com/flyer8/ansible-jenkins-pipeline.git /ansible/roles
+git clone git@github.com:deepak2717/ansible-jenkins-pipeline_project.git
 ```
 
 The directory contains Ansible roles for automated deploying Java, Jenkins 2.52 packets with adding Pipeline job, host file, playbook for executing and text files with examples of output.
 ```
-[root@srv2 roles]# ll
+# ll
 total 32
 -rw-r--r-- 1 root root   57 Mar 30 12:03 ansible.host
 -rw-r--r-- 1 root root 6597 Mar 30 12:03 ansible_output.txt
@@ -20,7 +20,7 @@ drwxr-xr-x 9 root root   98 Mar 30 12:03 jenkins
 -rw-r--r-- 1 root root   43 Mar 30 12:03 playbook.yml
 -rw-r--r-- 1 root root   27 Mar 30 12:03 README.md
 ```
-3.	Change directory /ansible/roles and execute the command:
+3.execute the command:
 ```
 ansible-playbook -i ansible.host playbook.yml
 ```
